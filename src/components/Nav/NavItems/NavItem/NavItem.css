@@ -6,17 +6,10 @@
 }
 
 .NavItem a {
-  color: #8f5c2c;
   text-decoration: none;
   width: 100%;
   box-sizing: border-box;
   display: block;
-}
-
-.NavItem a:hover,
-.NavItem a:active,
-.NavItem a.active {
-  color: #40a4c8;
 }
 
 @media (min-width: 500px) {
@@ -38,8 +31,9 @@
   .NavItem a:hover,
   .NavItem a:active,
   .NavItem a.active {
-    background-color: #8f5c2c;
-    border-bottom: 4px solid #40a4c8;
-    color: white;
+    background-color: white;
+    color: rebeccapurple;
+    transform: scale(1.2);
+    transition: 90ms;
   }
 }
