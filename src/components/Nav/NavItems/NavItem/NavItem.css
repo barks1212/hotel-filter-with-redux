@@ -3,6 +3,8 @@
   box-sizing: border-box;
   display: block;
   width: 100%;
+  font-size: 20px;
+  padding: 0 10px;
 }
 
 .NavItem a {
