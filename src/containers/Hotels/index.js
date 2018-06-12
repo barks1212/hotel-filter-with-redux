@@ -13,7 +13,6 @@ class Hotels extends React.Component {
     const { hotels } = this.props;
     return (
       <Aux>
-        <h2 className={classes.Title}>Search Results</h2>
         <ul className={classes.Hotels}>
           {hotels.map(hotel => <Hotel hotel={hotel} />)}
         </ul>

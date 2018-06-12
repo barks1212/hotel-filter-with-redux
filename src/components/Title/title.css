@@ -1,0 +1,12 @@
+.Title {
+  text-align: center;
+  font-size: 1.7rem;
+  height: 100%;
+  padding: 0;
+  margin: auto;
+}
+
+.Title h2 {
+  padding: 0;
+  margin: 0;
+}
