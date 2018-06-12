@@ -3,7 +3,7 @@ import * as actionTypes from "../actions";
 
 const initialState = {
   hotelList,
-  sort: "ascending",
+  sort: null,
   filters: {
     bar: false,
     gym: false,
