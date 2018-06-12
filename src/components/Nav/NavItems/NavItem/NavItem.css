@@ -23,6 +23,12 @@
     align-items: center;
   }
 
+  @media (max-width: 499px) {
+    .NavItem {
+      display: none;
+    }
+  }
+
   .NavItem a {
     color: white;
     height: 100%;

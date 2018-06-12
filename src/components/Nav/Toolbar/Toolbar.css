@@ -25,4 +25,8 @@
   .DesktopOnly {
     display: none;
   }
+  .Toolbar {
+    display: flex;
+    flex-direction: row;
+  }
 }

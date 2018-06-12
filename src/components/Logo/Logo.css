@@ -9,3 +9,28 @@
 .Logo img {
   height: 100%;
 }
+
+.MobileLogo {
+  background-color: white;
+  padding: 8px;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.MobileLogo img {
+  height: 100%;
+  float: right;
+}
+
+@media (max-width: 499px) {
+  .Logo {
+    display: none;
+  }
+}
+
+@media (min-width: 500px) {
+  .MobileLogo {
+    display: none;
+  }
+}
