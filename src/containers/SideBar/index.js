@@ -9,11 +9,13 @@ class SideBar extends React.Component {
     return (
       <Aux>
         <div className={classes.SideBar}>
-          <h3>sidebar</h3>
-          <h3>sidebar</h3>
-          <h3>sidebar</h3>
-          <h3>sidebar</h3>
-          <h3>sidebar</h3>
+          <div className={classes.SideBarContent}>
+            <h3>sidebar</h3>
+            <h3>sidebar</h3>
+            <h3>sidebar</h3>
+            <h3>sidebar</h3>
+            <h3>sidebar</h3>
+          </div>
         </div>
       </Aux>
     );
