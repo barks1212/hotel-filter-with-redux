@@ -1,9 +1,10 @@
 .Title {
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   height: 100%;
   padding: 0;
   margin: auto;
+  letter-spacing: 0.5px;
 }
 
 .Title h2 {
