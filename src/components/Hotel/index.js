@@ -17,7 +17,7 @@ const hotel = props => {
   return (
     <li className={classes.Hotel}>
       <span className={classes.HotelCard}>
-        {Name}
+        <h3>{Name}</h3>
         <img src={Image} alt={Name} />
         <span>{stars}</span>
         <span>
