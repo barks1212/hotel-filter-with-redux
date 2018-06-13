@@ -27,6 +27,26 @@
   border-right: 1px solid black;
 }
 
+.Price {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.HotelCard p {
+  margin-top: 0px;
+  margin-bottom: 2px;
+  font-weight: lighter;
+  font-size: 0.65rem;
+}
+.HotelCard h4 {
+  margin: 0 3px;
+  padding: 0 0;
+  font-size: 1rem;
+}
+
 .Hotel img {
   height: 50%;
   text-align: center;

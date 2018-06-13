@@ -12,7 +12,10 @@ const hotel = props => {
       <span className={classes.HotelCard}>
         {Name}
         <img src={Image} alt={Name} />
-        {Price}
+        <span>
+          <p>1 Night</p>
+          <h4>{`£${Price}`}</h4>
+        </span>
       </span>
     </li>
   );
