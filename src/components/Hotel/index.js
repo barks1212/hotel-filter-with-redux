@@ -2,6 +2,8 @@ import React from "react";
 
 import classes from "./Hotel.css";
 
+import Facility from "./Facility";
+
 const hotel = props => {
   const stars = new Array(props.hotel.StarRating)
     .fill(true)
@@ -23,6 +25,9 @@ const hotel = props => {
           <h4>{`£${Price}`}</h4>
         </span>
       </span>
+      <div className={classes.Facilities}>
+        <ul>{Facilities.map(fac => <Facility facility={fac} />)}</ul>
+      </div>
     </li>
   );
 };
