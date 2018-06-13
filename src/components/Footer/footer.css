@@ -1,0 +1,39 @@
+.Footer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rebeccapurple;
+  color: white;
+  height: 200px;
+}
+
+.Footer ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-left: 15%;
+}
+
+.Footer li {
+  padding: 5px 5px;
+  margin: 0 20px;
+}
+
+.Footer a {
+  text-decoration: none;
+  color: white;
+}
+.Footer li:hover,
+.Footer li:active,
+.Footer li.active {
+  background-color: white;
+  transform: scale(1.2);
+  transition: 90ms;
+  border-radius: 25px;
+  color: rebeccapurple;
+}
+.Footer a:hover,
+.Footer a:active,
+.Footer a.active {
+  color: rebeccapurple;
+}

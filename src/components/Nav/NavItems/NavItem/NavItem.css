@@ -43,5 +43,6 @@
     color: rebeccapurple;
     transform: scale(1.2);
     transition: 90ms;
+    border-radius: 25px;
   }
 }
