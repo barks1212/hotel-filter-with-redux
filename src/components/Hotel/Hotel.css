@@ -1,20 +1,35 @@
 .Hotel {
   display: flex;
-  flex-direction: column;
-
+  flex-direction: row;
+  border: 1px solid black;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 1px black;
   flex-wrap: wrap;
   flex-grow: 1;
   width: 100%;
-  margin: 10px auto;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-right: 20px;
   height: 250px;
   font-weight: bold;
   font-size: 1.2rem;
   list-style-type: none;
 }
 
+.HotelCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rebeccapurple;
+  color: white;
+  width: 25%;
+  border-right: 1px solid black;
+}
+
 .Hotel img {
   height: 50%;
   text-align: center;
-  width: 15%;
+  width: 75%;
   border: 1px solid black;
 }

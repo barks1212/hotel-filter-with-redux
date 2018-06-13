@@ -9,9 +9,11 @@ const hotel = props => {
   const { Name, Facilities, Image, Price } = props.hotel;
   return (
     <li className={classes.Hotel}>
-      {Name}
-      <img src={Image} alt={Name} />
-      {Price}
+      <span className={classes.HotelCard}>
+        {Name}
+        <img src={Image} alt={Name} />
+        {Price}
+      </span>
     </li>
   );
 };
