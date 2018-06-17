@@ -2,7 +2,7 @@ import React from "react";
 
 import classes from "./facility.css";
 
-import toTitleCase from "./utils/toTitleCase";
+import toTitleCase from "../../../Utils/toTitleCase";
 
 const facility = props => (
   <span className={classes.Facility}>
