@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 
 import classes from "./sidebar.css";
 
+import * as actionTypes from "../../store/actions";
+
 import Aux from "../../hoc/Aux";
 import SidebarTitle from "../../components/SidebarContent/Title";
 import Checkbox from "../../components/SidebarContent/CheckBox";
@@ -13,7 +15,12 @@ class SideBar extends React.Component {
   render() {
     const { hotelFilters } = this.props;
     const filters = filtersToArray(hotelFilters).map(filter => {
-      return <Checkbox filter={filter} />;
+      return (
+        <Checkbox
+          filter={filter}
+          filterHotels={() => this.props.filterHotels(filter)}
+        />
+      );
     });
 
     return (
@@ -22,11 +29,6 @@ class SideBar extends React.Component {
           <SidebarTitle />
           <div className={classes.SideBarContent}>
             <ul>{filters}</ul>
-            <h3>sidebar</h3>
-            <h3>sidebar</h3>
-            <h3>sidebar</h3>
-            <h3>sidebar</h3>
-            <h3>sidebar</h3>
           </div>
         </div>
       </Aux>
@@ -41,4 +43,13 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(SideBar);
+const mapDispatchToProps = dispatch => {
+  return {
+    filterHotels: fac => dispatch({ type: actionTypes.FILTER_HOTELS, fac: fac })
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SideBar);

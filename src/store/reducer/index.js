@@ -21,7 +21,24 @@ const reducer = (state = initialState, action) => {
     case actionTypes.SORT_HOTELS:
       return {};
     case actionTypes.FILTER_HOTELS:
-      return {};
+      let newFilters = Object.assign(state.filters, {
+        [action.fac]: !state.filters[action.fac]
+      });
+      let checkedChecker = [];
+      for (let key in state.filters) {
+        if (state.filters[key]) checkedChecker.push(key);
+      }
+      let newHotels = state.hotelList.filter(hotel => {
+        return checkedChecker.every(facility =>
+          hotel.Facilities.includes(facility)
+        );
+      });
+      console.log(newHotels);
+      return {
+        ...state,
+        hotelList: newHotels,
+        filters: newFilters
+      };
     default:
       return state;
   }

@@ -1,15 +1,22 @@
 import React from "react";
 
+import classes from "./checkbox.css";
+
 import toTitleCase from "../../../Utils/toTitleCase";
 
 const checkbox = props => {
-  const filterName = Object.keys(props.filter)[0];
-  const filterValue = Object.values(props.filter)[0];
   return (
-    <div>
+    <div className={classes.Checkbox}>
       <li>
-        <input type="checkbox" value={filterName} id="searchFilter" />
-        <label for="searchFilter">{toTitleCase(filterName)}</label>
+        <input
+          className={classes.Input}
+          type="checkbox"
+          value={props.filter}
+          onChange={props.filterHotels}
+          id="searchFilter"
+        />
+        <span className={classes.Faker} />
+        <label for="searchFilter">{toTitleCase(props.filter)}</label>
       </li>
     </div>
   );

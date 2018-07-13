@@ -1,9 +1,7 @@
 function filtersToArray(obj) {
   const result = [];
   for (let key in obj) {
-    result.push({
-      [key]: obj[key]
-    });
+    result.push(key);
   }
   return result;
 }

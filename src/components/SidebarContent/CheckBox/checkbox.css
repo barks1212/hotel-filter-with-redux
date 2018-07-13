@@ -1,0 +1,12 @@
+.Checkbox {
+  height: 7%;
+}
+
+.Checkbox li {
+  margin: 0px;
+  padding: 0px;
+}
+
+.Checkbox label {
+  font-size: 1rem;
+}

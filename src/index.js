@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
+import hotelList from "./data/hotel-list.json";
 
 import "./index.css";
 import App from "./App";
