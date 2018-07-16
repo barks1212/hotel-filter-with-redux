@@ -1,0 +1,8 @@
+.FilterReset {
+  background: inherit;
+  border: none;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  text-decoration: underline;
+}

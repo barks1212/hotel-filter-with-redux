@@ -1,2 +1,3 @@
 export const SORT_HOTELS = "SORT_HOTELS";
 export const FILTER_HOTELS = "FILTER_HOTELS";
+export const CLEAR_FILTERS = "CLEAR_FILTERS";

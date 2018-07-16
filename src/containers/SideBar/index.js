@@ -8,6 +8,7 @@ import * as actionTypes from "../../store/actions";
 import Aux from "../../hoc/Aux";
 import SidebarTitle from "../../components/SidebarContent/Title";
 import Checkbox from "../../components/SidebarContent/CheckBox";
+import FilterReset from "../../components/SidebarContent/FilterReset";
 
 import filtersToArray from "./Utils/filtersToArray";
 
@@ -17,18 +18,27 @@ class SideBar extends React.Component {
     const filters = filtersToArray(hotelFilters).map(filter => {
       return (
         <Checkbox
+          checked={hotelFilters[filter]}
           filter={filter}
           filterHotels={() => this.props.filterHotels(filter)}
         />
       );
     });
 
+    let filterReset;
+
+    for (let key in hotelFilters) {
+      if (hotelFilters[key])
+        filterReset = <FilterReset clearFilters={this.props.clearFilters} />;
+    }
+
     return (
       <Aux>
         <div className={classes.SideBar}>
           <SidebarTitle />
           <div className={classes.SideBarContent}>
-            <ul>{filters}</ul>
+            <ul style={{ height: "auto" }}>{filters}</ul>
+            {filterReset}
           </div>
         </div>
       </Aux>
@@ -45,7 +55,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    filterHotels: fac => dispatch({ type: actionTypes.FILTER_HOTELS, fac: fac })
+    filterHotels: fac =>
+      dispatch({ type: actionTypes.FILTER_HOTELS, fac: fac }),
+    clearFilters: () => dispatch({ type: actionTypes.CLEAR_FILTERS })
   };
 };
 

@@ -4,6 +4,7 @@
   background-color: rebeccapurple;
   color: white;
   height: 200px;
+  position: sticky;
 }
 
 .Footer ul {

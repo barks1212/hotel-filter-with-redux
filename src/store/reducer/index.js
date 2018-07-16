@@ -19,7 +19,24 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.SORT_HOTELS:
-      return {};
+      let newSort;
+      let sortedHotels;
+
+      if (action.sort) {
+        newSort = action.sort === "asc" ? "ascending" : "descending";
+      }
+
+      if (newSort) {
+        sortedHotels =
+          newSort === "ascending"
+            ? state.hotelList.sort((a, b) => a.StarRating - b.StarRating)
+            : state.hotelList.sort((a, b) => b.StarRating - a.StarRating);
+      }
+      return {
+        ...state,
+        sort: newSort,
+        hotelList: sortedHotels
+      };
 
     case actionTypes.FILTER_HOTELS:
       let newFilters = Object.assign(state.filters, {
@@ -34,11 +51,21 @@ const reducer = (state = initialState, action) => {
           hotel.Facilities.includes(facility)
         );
       });
-      console.log(newHotels);
       return {
         ...state,
         hotelList: newHotels,
         filters: newFilters
+      };
+
+    case actionTypes.CLEAR_FILTERS:
+      let resetFilters = Object.assign(state.filters, {});
+      for (let key in resetFilters) {
+        if (resetFilters[key]) resetFilters[key] = false;
+      }
+      return {
+        ...state,
+        hotelList,
+        filters: resetFilters
       };
 
     default:

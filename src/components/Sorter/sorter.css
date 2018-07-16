@@ -1,0 +1,21 @@
+.Sorter {
+  display: block;
+  width: 100%;
+  text-align: right;
+  padding: 5px 2px 0 2px;
+}
+
+.Button {
+  text-decoration: underline;
+  border: none;
+  background: inherit;
+  cursor: pointer;
+}
+
+.Button a:hover,
+.Button a:active,
+.Button a.active {
+  transform: scale(1.2);
+  transition: 90ms;
+  border: none;
+}
